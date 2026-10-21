@@ -1,0 +1,372 @@
+/* RESET CSS - Remove estilos padrão do navegador */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* Faz com que padding e border sejam incluídos no tamanho total */
+}
+/* ESTILOS GERAIS */
+body {
+font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+line-height: 1.6; /* Espaçamento entre linhas */
+color: #333; /* Cor do texto */
+}
+/* Container para centralizar conteúdo */
+.container {
+max-width: 1200px; /* Largura máxima */
+margin: 0 auto; /* Centraliza horizontalmente */
+padding: 0 20px; /* Espaçamento lateral */
+}
+/* ESTILOS DO CABEÇALHO */
+.header {
+background-color: #fff; /* Cor de fundo branca */
+box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+position: fixed; /* Fixa no topo da página */
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000; /* Fica sobre outros elementos */
+}
+.header .container {
+display: flex; /* Layout flexível */
+justify-content: space-between; /* Espaça elementos nas extremidades */
+align-items: center; /* Alinha verticalmente ao centro */
+padding: 1rem 20px; /* Espaçamento interno */
+}
+/* Logo do hotel */
+.logo h1 {
+color: #d4af37; /* Cor dourada */
+font-size: 2rem; /* Tamanho da fonte */
+font-weight: bold; /* Texto em negrito */
+}
+/* Menu de navegação */
+.nav-list {
+display: flex; /* Itens em linha */
+list-style: none; /* Remove marcadores da lista */
+gap: 2rem; /* Espaçamento entre itens */
+}
+.nav-list a {
+text-decoration: none; /* Remove sublinhado */
+color: #333; /* Cor do texto */
+font-weight: 500; /* Peso da fonte */
+transition: color 0.3s ease; /* Transição suave da cor */
+}
+.nav-list a:hover {
+color: #d4af37; /* Cor dourada ao passar o mouse */
+}
+/* SEÇÃO HERO (PRINCIPAL) */
+.hero {
+height: 100vh; /* Altura total da tela */
+background: linear-gradient(
+rgba(0,0,0,0.4), /* Sobreposição escura para melhorar legibilidade */
+rgba(0,0,0,0.4)
+), url('https://images.pexels.com/photos/338504/pexels-photo338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Imagem de fundo */
+background-size: cover; /* Imagem cobre toda a área */
+background-position: center; /* Centraliza a imagem */
+display: flex; /* Layout flexível */
+align-items: center; /* Centraliza verticalmente */
+justify-content: center; /* Centraliza horizontalmente */
+text-align: center; /* Alinha texto ao centro */
+color: white; /* Texto branco */
+}
+.hero-title {
+font-size: 3.5rem; /* Tamanho grande para o título */
+margin-bottom: 1rem; /* Espaçamento inferior */
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra no texto */
+}
+.hero-subtitle {
+font-size: 1.2rem; /* Tamanho médio */
+margin-bottom: 2rem; /* Espaçamento inferior */
+text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra no texto */
+}
+/* BOTÃO PRIMÁRIO */
+.btn-primary {
+display: inline-block; /* Comportamento de bloco inline */
+background-color: #d4af37; /* Cor de fundo dourada */
+color: white; /* Texto branco */
+padding: 15px 30px; /* Espaçamento interno */
+text-decoration: none; /* Remove sublinhado */
+border-radius: 5px; /* Bordas arredondadas */
+font-size: 1.1rem; /* Tamanho da fonte */
+font-weight: bold; /* Texto em negrito */
+transition: all 0.3s ease; /* Transição suave */
+}
+.btn-primary:hover {
+background-color: #b8941f; /* Cor mais escura ao passar o mouse */
+transform: translateY(-2px); /* Efeito de elevação */
+box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra */
+}
+/* TÍTULOS DE SEÇÃO */
+.section-title {
+text-align: center; /* Centraliza o texto */
+font-size: 2.5rem; /* Tamanho grande */
+margin-bottom: 3rem; /* Espaçamento inferior */
+color: #333; /* Cor escura */
+position: relative; /* Posicionamento relativo para o elemento ::after */
+}
+/* Linha decorativa sob o título */
+.section-title::after {
+content: ''; /* Conteúdo vazio */
+display: block; /* Comportamento de bloco */
+width: 80px; /* Largura da linha */
+height: 3px; /* Altura da linha */
+background-color: #d4af37; /* Cor dourada */
+margin: 15px auto 0; /* Margem: 15px em cima, centralizada */
+}
+/* SEÇÃO SOBRE */
+.about {
+padding: 100px 0; /* Espaçamento vertical */
+background-color: #f8f9fa; /* Cor de fundo clara */
+}
+.about-content {
+display: flex; /* Layout flexível */
+align-items: center; /* Alinha verticalmente ao centro */
+gap: 4rem; /* Espaçamento entre colunas */
+flex-wrap: wrap; /* Quebra linha em telas menores */
+}
+.about-text {
+flex: 1; /* Ocupa espaço disponível */
+min-width: 300px; /* Largura mínima */
+}
+.about-text p {
+font-size: 1.1rem; /* Tamanho da fonte */
+margin-bottom: 1.5rem; /* Espaçamento inferior */
+text-align: justify; /* Justifica o texto */
+}
+.about-image {
+flex: 1; /* Ocupa espaço disponível */
+min-width: 300px; /* Largura mínima */
+}
+.about-image img {
+width: 100%; /* Largura total */
+height: 400px; /* Altura fixa */
+object-fit: cover; /* Mantém proporção cortando se necessário */
+border-radius: 10px; /* Bordas arredondadas */
+box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra */
+}
+/* SEÇÃO QUARTOS */
+.rooms {
+padding: 100px 0; /* Espaçamento vertical */
+}
+.rooms-grid {
+display: grid; /* Layout em grid */
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Colunas responsivas */
+gap: 2rem; /* Espaçamento entre itens */
+margin-top: 2rem; /* Margem superior */
+}
+/* Cartão de quarto */
+.room-card {
+background-color: white; /* Fundo branco */
+border-radius: 10px; /* Bordas arredondadas */
+overflow: hidden; /* Esconde conteúdo que ultrapassa as bordas */
+box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Sombra */
+transition: transform 0.3s ease; /* Transição suave */
+}
+.room-card:hover {
+transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+.room-card img {
+width: 100%; /* Largura total */
+height: 250px; /* Altura fixa */
+object-fit: cover; /* Mantém proporção */
+}
+.room-info {
+padding: 1.5rem; /* Espaçamento interno */
+}
+.room-info h3 {
+color: #333; /* Cor do texto */
+margin-bottom: 0.5rem; /* Espaçamento inferior */
+font-size: 1.3rem; /* Tamanho da fonte */
+}
+.room-info p {
+color: #666; /* Cor cinza */
+margin-bottom: 1rem; /* Espaçamento inferior */
+}
+.room-price {
+color: #d4af37; /* Cor dourada */
+font-size: 1.2rem; /* Tamanho da fonte */
+font-weight: bold; /* Texto em negrito */
+}
+/* SEÇÃO SERVIÇOS */
+.services {
+padding: 100px 0; /* Espaçamento vertical */
+background-color: #f8f9fa; /* Fundo claro */
+}
+.services-grid {
+display: grid; /* Layout em grid */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+gap: 2rem; /* Espaçamento entre itens */
+margin-top: 2rem; /* Margem superior */
+}
+/* Item de serviço */
+.service-item {
+background-color: white; /* Fundo branco */
+padding: 2rem; /* Espaçamento interno */
+border-radius: 10px; /* Bordas arredondadas */
+text-align: center; /* Texto centralizado */
+box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra sutil */
+transition: transform 0.3s ease; /* Transição suave */
+}
+.service-item:hover {
+transform: translateY(-3px); /* Efeito de elevação */
+}
+.service-icon {
+font-size: 3rem; /* Tamanho grande para o ícone */
+margin-bottom: 1rem; /* Espaçamento inferior */
+}
+.service-item h3 {
+color: #333; /* Cor do texto */
+margin-bottom: 0.5rem; /* Espaçamento inferior */
+font-size: 1.2rem; /* Tamanho da fonte */
+}
+.service-item p {
+color: #666; /* Cor cinza */
+line-height: 1.5; /* Espaçamento entre linhas */
+}
+/* SEÇÃO CONTATO */
+.contact {
+padding: 100px 0; /* Espaçamento vertical */
+}
+.contact-info {
+display: flex; /* Layout flexível */
+justify-content: space-around; /* Distribui espaço igualmente */
+flex-wrap: wrap; /* Quebra linha em telas menores */
+gap: 2rem; /* Espaçamento entre itens */
+margin-top: 2rem; /* Margem superior */
+}
+.contact-item {
+text-align: center; /* Texto centralizado */
+min-width: 200px; /* Largura mínima */
+}
+.contact-item h3 {
+color: #d4af37; /* Cor dourada */
+margin-bottom: 1rem; /* Espaçamento inferior */
+font-size: 1.3rem; /* Tamanho da fonte */
+}
+.contact-item p {
+color: #666; /* Cor cinza */
+font-size: 1.1rem; /* Tamanho da fonte */
+}
+/* RODAPÉ */
+.footer {
+background-color: #333; /* Fundo escuro */
+color: white; /* Texto branco */
+padding: 3rem 0 1rem; /* Espaçamento vertical */
+}
+.footer-content {
+display: flex; /* Layout flexível */
+justify-content: space-between; /* Espaça nas extremidades */
+align-items: flex-start; /* Alinha no topo */
+flex-wrap: wrap; /* Quebra linha em telas menores */
+gap: 2rem; /* Espaçamento entre itens */
+margin-bottom: 2rem; /* Margem inferior */
+}
+.footer-info h3 {
+color: #d4af37; /* Cor dourada */
+margin-bottom: 0.5rem; /* Espaçamento inferior */
+}
+.footer-info p {
+color: #ccc; /* Cor cinza clara */
+}
+/* Redes sociais */
+.social-media h4 {
+margin-bottom: 1rem; /* Espaçamento inferior */
+color: #d4af37; /* Cor dourada */
+}
+.social-icons {
+display: flex; /* Layout flexível */
+gap: 1rem; /* Espaçamento entre ícones */
+}
+/* Ícones das redes sociais */
+.social-icon {
+display: inline-block; /* Comportamento inline-block */
+width: 40px; /* Largura fixa */
+height: 40px; /* Altura fixa */
+background-color: #555; /* Cor de fundo */
+color: white; /* Texto branco */
+text-align: center; /* Texto centralizado */
+line-height: 40px; /* Centraliza verticalmente o texto */
+border-radius: 50%; /* Formato circular */
+text-decoration: none; /* Remove sublinhado */
+transition: all 0.3s ease; /* Transição suave */
+font-size: 1.2rem; /* Tamanho da fonte */
+}
+/* Cores específicas para cada rede social */
+.social-icon.facebook:hover {
+background-color: #3b5998; /* Azul do Facebook */
+}
+.social-icon.instagram:hover {
+background-color: #e4405f; /* Rosa do Instagram */
+}
+.social-icon.twitter:hover {
+background-color: #1da1f2; /* Azul do Twitter */
+}
+.social-icon.youtube:hover {
+background-color: #ff0000; /* Vermelho do YouTube */
+}
+.social-icon.linkedin:hover {
+background-color: #0077b5; /* Azul do LinkedIn */
+}
+.social-icon:hover {
+transform: translateY(-3px); /* Efeito de elevação */
+box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra */
+}
+/* Parte inferior do rodapé */
+.footer-bottom {
+text-align: center; /* Texto centralizado */
+padding-top: 2rem; /* Espaçamento superior */
+border-top: 1px solid #555; /* Linha superior */
+color: #ccc; /* Cor cinza clara */
+}
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 768px) {
+/* Ajustes no cabeçalho para mobile */
+.header .container {
+flex-direction: column; /* Muda para coluna */
+gap: 1rem; /* Espaçamento entre elementos */
+}
+.nav-list {
+gap: 1rem; /* Reduz espaçamento entre itens do menu */
+}
+/* Ajustes no hero para mobile */
+.hero-title {
+font-size: 2.5rem; /* Reduz tamanho do título */
+}
+.hero-subtitle {
+font-size: 1rem; /* Reduz tamanho do subtítulo */
+}
+/* Ajustes no about para mobile */
+.about-content {
+flex-direction: column; /* Muda para coluna */
+gap: 2rem; /* Reduz espaçamento */
+}
+/* Ajustes nos títulos para mobile */
+.section-title {
+font-size: 2rem; /* Reduz tamanho do título */
+}
+/* Ajustes no grid de quartos para mobile */
+.rooms-grid {
+grid-template-columns: 1fr; /* Uma coluna apenas */
+}
+/* Ajustes no grid de serviços para mobile */
+.services-grid {
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas menores */
+}
+/* Ajustes no contato para mobile */
+.contact-info {
+flex-direction: column; /* Muda para coluna */
+align-items: center; /* Centraliza */
+}
+/* Ajustes no rodapé para mobile */
+.footer-content {
+flex-direction: column; /* Muda para coluna */
+text-align: center; /* Centraliza texto */
+}
+}
+/* SCROLL SUAVE */
+html {
+scroll-behavior: smooth; /* Adiciona rolagem suave ao clicar nos links do menu */
+}
+/* AJUSTE PARA COMPENSAR O HEADER FIXO */
+section {
+scroll-margin-top: 100px; /* Compensa a altura do header fixo ao navegar */
+}
